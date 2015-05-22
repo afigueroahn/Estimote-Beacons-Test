@@ -21,30 +21,24 @@ var app = (function()
 
 	// ------------- Private helper function ------------- //
 
-	function onDeviceReady()
-	{
+	function onDeviceReady() {
 		// TODO: Add functionality if needed.
-		hyper.log('onDeviceReady')
+		//hyper.log('onDeviceReady')
 	}
 
 	// ------------- Application functions ------------- //
 
-	app.formatDistance = function(meters)
-	{
+	app.formatDistance = function(meters) {
 		if (!meters) { return 'Unknown'; }
 
-		if (meters > 1)
-		{
+		if (meters > 1) {
 			return meters.toFixed(3) + ' m';
-		}
-		else
-		{
+		} else {
 			return (meters * 100).toFixed(3) + ' cm';
 		}
 	};
 
-	app.formatProximity = function(proximity)
-	{
+	app.formatProximity = function(proximity) {
 		if (!proximity) { return 'Unknown'; }
 
 		// Eliminate bad values (just in case).
@@ -55,10 +49,8 @@ var app = (function()
 		return app.proximityNames[proximity];
 	};
 
-	app.beaconColorStyle = function(color)
-	{
-		if (!color)
-		{
+	app.beaconColorStyle = function(color) {
+		if (!color) {
 			color = 0;
 		}
 
@@ -70,13 +62,11 @@ var app = (function()
 		return app.beaconColorStyles[color];
 	};
 
-	app.showScreen = function(screenId)
-	{
+	app.showScreen = function(screenId) {
 		// Hide current screen if set.
-		if (app.currentScreenId != null)
-		{
-			$('#' + app.currentScreenId).hide();
-		}
+	    if (app.currentScreenId != null) {
+	        $('#' + app.currentScreenId).hide();
+	    }
 
 		// Show new screen.
 		app.currentScreenId = screenId;
@@ -84,13 +74,11 @@ var app = (function()
 		document.body.scrollTop = 0;
 	};
 
-	app.showHomeScreen = function()
-	{
+	app.showHomeScreen = function() {
 		app.showScreen('id-screen-home');
 	};
 
-	app.onNavigateBack = function()
-	{
+	app.onNavigateBack = function() {
 		history.back();
 	};
 

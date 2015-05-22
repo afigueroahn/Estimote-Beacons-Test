@@ -1,39 +1,34 @@
 // Scan beacons screen.
 ;(function(app)
 {
-	app.startScanningBeacons = function()
-	{
-		function onScan(beaconInfo)
-		{
+	app.startScanningBeacons = function() {
+		function onScan(beaconInfo) {
 			displayBeconInfo(beaconInfo);
 		}
 
-		function onError(errorMessage)
-		{
-			console.log('Scan error: ' + errorMessage);
+		function onError(errorMessage) {
+			//console.log('Scan error: ' + errorMessage);
 		}
 
-		function displayBeconInfo(beaconInfo)
-		{
+		function displayBeconInfo(beaconInfo) {
 			// Clear beacon HTML items.
 			$('#id-screen-scan-beacons .style-item-list').empty();
 
 			// Sort beacons by signal strength.
 			beaconInfo.beacons.sort(function(beacon1, beacon2) {
-				return beacon1.rssi > beacon2.rssi; });
+			    return beacon1.rssi > beacon2.rssi;
+			});
 
 			// Generate HTML for beacons.
 			var html = '';
-			$.each(beaconInfo.beacons, function(key, beacon)
-			{
+			$.each(beaconInfo.beacons, function(key, beacon) {
 				// jQuery doesn't work.
 				var element = $(createBeaconHTML(beacon));
 				$('#id-screen-scan-beacons .style-item-list').append(element);
 			});
 		};
 
-		function createBeaconHTML(beacon)
-		{
+		function createBeaconHTML(beacon) {
 			var colorClasses = app.beaconColorStyle(beacon.color);
 			var htm = '<div class="' + colorClasses + '">'
 				+ '<table><tr><td>Major</td><td>' + beacon.major
@@ -56,8 +51,7 @@
 			onError);
 	};
 
-	app.stopScanningBeacons = function()
-	{
+	app.stopScanningBeacons = function() {
 		estimote.beacons.stopEstimoteBeaconDiscovery();
 		app.showHomeScreen();
 	};
