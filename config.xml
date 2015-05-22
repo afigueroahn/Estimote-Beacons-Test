@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns:gap="http://phonegap.com/ns/1.0" xmlns="http://www.w3.org/ns/widgets" id="com.netdevsoftware.EstimoteBeaconsTest" version="1.0.0">
+  <name>Estimote Beacons Test</name>
+  <description>Estimote Beacons plugin cordova/phonegap test.</description>
+  <author email="support@netdevsoftware.com" href="http://netdevsoftware.com">NetDev Software Team</author>
+  <content src="index.html" />
+  <access origin="*" />
+
+  <!-- Plugin's -->
+  <gap:plugin name="com.netdevsoftware.estimotebeacons" />
+
+  <!-- Multi-Platform -->
+  <preference name="fullscreen" value="true" />
+
+</widget>
