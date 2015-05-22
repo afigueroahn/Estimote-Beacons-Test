@@ -16,6 +16,10 @@
         alert(info);
     };
 
+    function onError(errorMessage) {
+        alert(errorMessage);
+    };
+
     function onPause() {
         // TODO: This application has been suspended. Save application state here.
     };
