@@ -7,8 +7,7 @@
   <access origin="*" />
 
   <!-- Plugin's -->
-  <!-- <gap:plugin name="com.netdevsoftware.estimotebeacons" /> -->
-  <gap:plugin name="com.estimote.sdk" version="1.0.7" />
+  <gap:plugin name="com.netdevsoftware.estimotebeacons" />
   
   <!-- Multi-Platform -->
   <preference name="fullscreen" value="true" />
