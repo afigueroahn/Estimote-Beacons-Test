@@ -10,11 +10,12 @@
 
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
         estimote.startListening('Telerik');
-        document.addEventListener('beaconsReceived', onBeaconsReceived, false);
+        document.addEventListener('beaconsReceived', this.onBeaconsReceived, false);
 
     };
 
     function onBeaconsReceived(result) {
+        alert('algo')
         if (result.beacons && result.beacons.length > 0) {
             var msg = "Beacons found: " + result.beacons.length + "<br/>";
             for (var i = 0; i < result.beacons.length; i++) {
