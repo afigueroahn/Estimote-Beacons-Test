@@ -15,7 +15,7 @@
     };
 
     function onBeaconsReceived(result) {
-        alert('algo')
+        alert('algo');
         if (result.beacons && result.beacons.length > 0) {
             var msg = "Beacons found: " + result.beacons.length + "<br/>";
             for (var i = 0; i < result.beacons.length; i++) {
