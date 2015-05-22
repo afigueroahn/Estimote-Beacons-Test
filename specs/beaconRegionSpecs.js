@@ -24,8 +24,8 @@ describe('BeaconRegion', function() {
     });
 
 	it('has a constructor that returns new instances from an identifier and a uuid.', function () {
-		var uuid = 'B7CFA126-510E-4E18-83AB-59F6780B3AF5';
-		var identifier = 'BeaconInTheHouse';
+	    var uuid = 'B9407F30-F5F8-466E-AFF9-25556B57FE6D';
+		var identifier = 'ice';
 		var beaconRegion = new BeaconRegion(identifier, uuid);
 		expect(beaconRegion).toBeDefined();
         expect(beaconRegion instanceof BeaconRegion).toBe(true);
@@ -51,10 +51,10 @@ describe('BeaconRegion', function() {
 	});
 
 	it('has a constructor that returns new instances from an identifier, a uuid and a major+minor', function () {
-		var uuid = 'B7CFA126-510E-4E18-83AB-59F6780B3AF7';
-		var identifier = 'BeaconCloseToTheHouse';
-		var major = 12345;
-		var minor = 30000;
+	    var uuid = 'B9407F30-F5F8-466E-AFF9-25556B57FE6D';
+	    var identifier = 'blueberry';
+	    var major = 60546;
+	    var minor = 62256;
 		var beaconRegion = new BeaconRegion(identifier, uuid, major, minor);
 		expect(beaconRegion).toBeDefined();
 		expect(beaconRegion instanceof BeaconRegion).toBe(true);
