@@ -14,10 +14,12 @@
     };
 
     function onSuccess(info) {
+        alert('info');
         alert(info);
     };
 
     function onError(errorMessage) {
+        alert('errorMessage');
         alert(errorMessage);
     };
 
