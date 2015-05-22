@@ -9,6 +9,11 @@
         document.addEventListener( 'resume', onResume.bind( this ), false );
         
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
+        estimote.beacons.startEstimoteBeaconsDiscoveryForRegion({}, onSuccess(info), onError(errorMessage));
+    };
+
+    function onSuccess(info) {
+        alert(info);
     };
 
     function onPause() {

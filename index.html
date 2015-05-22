@@ -3,7 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <title>Hello World</title>
+    <script src="scripts/EstimoteBeacons.js"></script>
+    <script type="text/javascript">
+        estimote.beacons.startEstimoteBeaconsDiscoveryForRegion({},onSuccess(info),onError(errorMessage));
+        function onSuccess(info) {
+            alert(info)
+        };
 
+    </script>
     <!-- Hello World references -->
     <link href="css/index.css" rel="stylesheet" />
 </head>
