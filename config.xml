@@ -7,7 +7,7 @@
   <access origin="*" />
 
   <!-- Plugin's -->
-  <gap:plugin name="com.estimote.sdk" version="1.0.7" />
+
   
   <!-- Multi-Platform -->
   <preference name="fullscreen" value="true" />
