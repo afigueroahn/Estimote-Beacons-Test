@@ -12,7 +12,6 @@
         estimote.startListening('Telerik');
         document.addEventListener('beaconsReceived', onBeaconsReceived, false);
 
-
     };
 
     function onBeaconsReceived(result) {
