@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget xmlns:gap="http://phonegap.com/ns/1.0" xmlns="http://www.w3.org/ns/widgets" id="com.netdevsoftware.HelloWorld" version="1.0.0">
-  <name>Hello World</name>
-  <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.</description>
+<widget xmlns:gap="http://phonegap.com/ns/1.0" xmlns="http://www.w3.org/ns/widgets" id="com.netdevsoftware.EstimoteBeaconsTest" version="1.0.0">
+  <name>Estimote Beacons Test</name>
+  <description>Estimote Beacons Plugin Test.</description>
   <author email="support@netdevsoftware.com" href="http://netdevsoftware.com">NetDev Software Team</author>
   <content src="index.html" />
   <access origin="*" />
